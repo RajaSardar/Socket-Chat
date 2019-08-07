@@ -32,8 +32,13 @@ socket.on("typing", function(data) {
     feedback.innerHTML='<p><strong>' + data.handle + ':</strong> is Typing</p>';
     
 });
-socket.on('counter', function (data) {
+
+socket.on('broadcast',function(data) {
+    counter.innerHTML = data.description;
+ });
+
+/*socket.on('counter', function (data) {
 
     counter.innerHTML=data.count;
 
-  });
+  });*/
